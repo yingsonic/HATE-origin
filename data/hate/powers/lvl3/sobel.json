@@ -1,0 +1,9 @@
+{
+    "name": "§6§n",
+    "description": "\n",
+    "hidden": false,
+
+    "type": "origins:shader",
+    "shader": "minecraft:shaders/post/sobel.json",
+    "toggleable": false
+}

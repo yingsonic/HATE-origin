@@ -1,0 +1,41 @@
+{
+    "replace": false,
+    "origins": [
+        "hate:lvl0",
+        {
+            "condition": {
+                "type": "origins:resource",
+                "resource": "hate:h_level",
+                "comparison": "==",
+                "compare_to": 1
+            },
+            "origins": [
+                "hate:lvl1"
+            ]
+        },
+        {
+            "condition": {
+                "type": "origins:resource",
+                "resource": "hate:h_level",
+                "comparison": "==",
+                "compare_to": 2
+            },
+            "origins": [
+                "hate:lvl2"
+            ]
+        },
+        {
+            "condition": {
+                "type": "origins:resource",
+                "resource": "hate:h_level",
+                "comparison": "==",
+                "compare_to": 3
+            },
+            "origins": [
+                "hate:lvl3"
+            ]
+        }
+    ],
+    "default_origin": "hate:lvl0",
+    "hidden": true
+}
