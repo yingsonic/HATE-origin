@@ -1,6 +1,8 @@
 {
 	"powers": [
 		"hate:setup",
+		"hate:lvl1/effects",
+		"hate:lvl1/regen",
 		"hate:lvl1/vignette"
 	],
 	"icon": {

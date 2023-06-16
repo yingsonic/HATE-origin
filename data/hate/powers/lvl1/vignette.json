@@ -1,16 +1,26 @@
 {
-    "name": "§6§n",
-    "description": "\n",
+    "name": "§1§n...",
+    "description": "Hate is creeping up on you.",
     "hidden": false,
 
-    "type": "origins:overlay",
-    "texture": "minecraft:textures/block/black_concrete.png",
-    "strength": 0.3,
-    "red": 1.0,
-    "green": 1.0,
-    "blue": 1.0,
-    "draw_mode": "texture",
-    "draw_phase": "below_hud",
-    "hide_with_hud": false,
-    "visible_in_third_person": false
+    "type": "origins:multiple",
+    "overlay": {
+        "type": "origins:overlay",
+        "texture": "minecraft:textures/block/black_concrete.png",
+        "strength": 0.3,
+        "red": 1.0,
+        "green": 1.0,
+        "blue": 1.0,
+        "draw_mode": "texture",
+        "draw_phase": "below_hud",
+        "hide_with_hud": false,
+        "visible_in_third_person": true
+    },
+    "model": {
+        "type": "origins:model_color",
+        "red": 0.8,
+        "green": 0.8,
+        "blue": 0.8,
+        "alpha": 1.0
+    }
 }

@@ -4,7 +4,7 @@
 		"hate:lvl3/sobel"
 	],
 	"icon": {
-		"item": "minecraft:player_head"
+		"item": "minecraft:air"
 	},
 	"order": 10,
 	"impact": 3,
