@@ -4,6 +4,7 @@
 		"hate:lvl1/regen",
 		"hate:lvl1/vignette",
 		"hate:lvl1/system/on_kill",
+		"hate:lvl1/system/regress",
 		"hate:lvl1/system/passive"
 	],
 	"icon": {
@@ -12,7 +13,7 @@
 	"order": 10,
 	"impact": 3,
 
-	"name": "§fLevel 1",
+	"name": "§7Level 1",
 	"description": "§cHate is creeping up on you.",
     "unchoosable": true
 }

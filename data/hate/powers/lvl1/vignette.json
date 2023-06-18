@@ -7,8 +7,19 @@
     "overlay": {
         "type": "origins:action_on_callback",
         "entity_action_gained": {
-            "type": "origins:execute_command",
-            "command": "worldborder warning distance 47000000"
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "worldborder warning distance 47000000"
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:h_var",
+                    "operation": "set",
+                    "change": 250
+                }
+            ]
         },
         "execute_chosen_when_orb": true
     },

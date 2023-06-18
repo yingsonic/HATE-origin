@@ -16,5 +16,12 @@
         "type": "origins:shader",
         "shader": "minecraft:shaders/post/sobel.json",
         "toggleable": false
+    },
+    "model": {
+        "type": "origins:model_color",
+        "red": 0,
+        "green": 0,
+        "blue": 0,
+        "alpha": 0.5
     }
 }

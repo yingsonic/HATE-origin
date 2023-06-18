@@ -2,6 +2,7 @@
 	"powers": [
 		"hate:lvl0/vignette",
 		"hate:lvl0/system/on_kill",
+		"hate:lvl0/system/on_death",
 		"hate:lvl0/system/passive"
 	],
 	"icon": {
@@ -11,6 +12,6 @@
 	"impact": 3,
 
 	"name": "§fLevel 0",
-	"description": "§cA r§kegul§r§car hu§kman§r§c. Your or§kdi§r§kna§r§cry M§kin§r§kecr§r§caft exp§kerienc§r§ce awaits.",
+	"description": "A regular human. Your ordinary Minecraft experience awaits.",
     "unchoosable": false
 }
