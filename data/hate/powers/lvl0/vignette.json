@@ -4,19 +4,12 @@
     "hidden": true,
 
     "type": "origins:multiple",
-    "overlay": {
+    "remove": {
         "type": "origins:action_on_callback",
         "entity_action_gained": {
             "type": "origins:execute_command",
-            "command": "worldborder warning distance 47000000"
+            "command": "worldborder warning distance 5"
         },
         "execute_chosen_when_orb": true
-    },
-    "model": {
-        "type": "origins:model_color",
-        "red": 0.8,
-        "green": 0.8,
-        "blue": 0.8,
-        "alpha": 1.0
     }
 }

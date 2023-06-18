@@ -13,7 +13,7 @@
 		"type": "origins:if_else",
 		"condition": {
 			"type": "origins:origin",
-			"origin": "hate:ORIGINIDHERE",
+			"origin": "hate:hate",
 			"inverted": true
 		},
 		"if_action": {
@@ -34,7 +34,7 @@
 		"type": "origins:if_else",
 		"condition": {
 			"type": "origins:origin",
-			"origin": "hate:ORIGINIDHERE"
+			"origin": "hate:hate"
 		},
 		"if_action": {
 			"type": "origins:and",
@@ -54,7 +54,7 @@
 		"type": "origins:if_else",
 		"condition": {
 			"type": "origins:origin",
-			"origin": "hate:ORIGINIDHERE"
+			"origin": "hate:hate"
 		},
 		"if_action": {
 			"type": "origins:and",

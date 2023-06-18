@@ -1,9 +1,10 @@
 {
 	"powers": [
-		"hate:setup",
 		"hate:lvl1/effects",
 		"hate:lvl1/regen",
-		"hate:lvl1/vignette"
+		"hate:lvl1/vignette",
+		"hate:lvl1/system/on_kill",
+		"hate:lvl1/system/passive"
 	],
 	"icon": {
 		"item": "minecraft:player_head"
@@ -12,6 +13,6 @@
 	"impact": 3,
 
 	"name": "§fLevel 1",
-	"description": "§cA r§kegul§r§car hu§kman§r§c. Your or§kdi§r§kna§r§cry M§kin§r§kecr§r§caft exp§kerienc§r§ce awaits.",
+	"description": "§cHate is creeping up on you.",
     "unchoosable": true
 }

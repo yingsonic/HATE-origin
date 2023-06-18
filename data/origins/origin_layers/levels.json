@@ -37,5 +37,7 @@
         }
     ],
     "default_origin": "hate:lvl0",
-    "hidden": true
+    "auto_choose": true,
+    "name": "Hate",
+    "hidden": false
 }

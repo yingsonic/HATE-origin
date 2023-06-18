@@ -1,0 +1,84 @@
+{
+    "name": "§6§n",
+    "description": "\n",
+    "hidden": false,
+
+    "type": "origins:multiple",
+    "hostile": {
+        "type": "origins:self_action_on_kill",
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:h_var",
+            "operation": "add",
+            "change": 5
+        },
+        "target_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:living"
+                },
+                {
+                    "type": "origins:in_tag",
+                    "tag": "hate:hostile"
+                }
+            ]
+        },
+        "hud_render": {
+            "should_render": false
+        },
+        "cooldown": 20
+    },
+    "non_hostile": {
+        "type": "origins:self_action_on_kill",
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:h_var",
+            "operation": "add",
+            "change": 15
+        },
+        "target_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:living"
+                },
+                {
+                    "type": "origins:in_tag",
+                    "tag": "hate:hostile",
+                    "inverted": true
+                }
+            ]
+        },
+        "hud_render": {
+            "should_render": false
+        },
+        "cooldown": 20
+    },
+    "hurt_non_hostile": {
+        "type": "origins:self_action_on_hit",
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:h_var",
+            "operation": "add",
+            "change": 1
+        },
+        "target_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:living"
+                },
+                {
+                    "type": "origins:in_tag",
+                    "tag": "hate:hostile",
+                    "inverted": true
+                }
+            ]
+        },
+        "hud_render": {
+            "should_render": false
+        },
+        "cooldown": 20
+    }
+}

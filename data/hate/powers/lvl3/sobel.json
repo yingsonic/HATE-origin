@@ -3,7 +3,18 @@
     "description": "§4§kHATEHATEHATEHATEHATEHATEHATEHATE",
     "hidden": false,
 
-    "type": "origins:shader",
-    "shader": "minecraft:shaders/post/sobel.json",
-    "toggleable": false
+    "type": "origins:multiple",
+    "remove": {
+        "type": "origins:action_on_callback",
+        "entity_action_gained": {
+            "type": "origins:execute_command",
+            "command": "worldborder warning distance 5"
+        },
+        "execute_chosen_when_orb": true
+    },
+    "shader": {
+        "type": "origins:shader",
+        "shader": "minecraft:shaders/post/sobel.json",
+        "toggleable": false
+    }
 }

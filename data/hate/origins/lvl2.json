@@ -1,7 +1,8 @@
 {
 	"powers": [
-		"hate:setup",
-		"hate:lvl2/vignette"
+		"hate:lvl2/vignette",
+		"hate:lvl2/system/on_kill",
+		"hate:lvl2/system/passive"
 	],
 	"icon": {
 		"item": "minecraft:player_head"
@@ -9,7 +10,7 @@
 	"order": 10,
 	"impact": 3,
 
-	"name": "§fLevel 1",
-	"description": "§cA r§kegul§r§car hu§kman§r§c. Your or§kdi§r§kna§r§cry M§kin§r§kecr§r§caft exp§kerienc§r§ce awaits.",
+	"name": "§fLevel 2",
+	"description": "§cHate is cr§keepi§r§cng up on you.",
     "unchoosable": true
 }

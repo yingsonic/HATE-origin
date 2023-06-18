@@ -1,6 +1,8 @@
 {
 	"powers": [
-
+		"hate:lvl0/vignette",
+		"hate:lvl0/system/on_kill",
+		"hate:lvl0/system/passive"
 	],
 	"icon": {
 		"item": "minecraft:player_head"
@@ -10,5 +12,5 @@
 
 	"name": "§fLevel 0",
 	"description": "§cA r§kegul§r§car hu§kman§r§c. Your or§kdi§r§kna§r§cry M§kin§r§kecr§r§caft exp§kerienc§r§ce awaits.",
-    "unchoosable": true
+    "unchoosable": false
 }
