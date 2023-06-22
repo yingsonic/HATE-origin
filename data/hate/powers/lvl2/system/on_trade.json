@@ -1,0 +1,34 @@
+{
+    "name": "§6§n",
+    "description": "\n",
+    "hidden": true,
+
+    "type": "origins:multiple",
+    "main": {
+        "type": "apoli:action_over_time",
+        "rising_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:h_var",
+                    "operation": "add",
+                    "change": -5
+                },
+                {
+                    "type": "origins:delay",
+                    "ticks": 10,
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "advancement revoke @s only hate:trade/root"
+                    }
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:advancement",
+            "advancement": "hate:trade/root"
+        },
+        "interval": 1
+    }
+}

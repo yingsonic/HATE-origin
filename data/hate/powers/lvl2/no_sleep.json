@@ -1,0 +1,11 @@
+{
+    "name": "§c§nRestless",
+    "description": "You can no longer sleep.\n",
+    "hidden": false,
+
+    "type": "origins:prevent_block_use",
+    "block_condition": {
+        "type": "origins:block",
+        "block": "bed"
+    }
+}

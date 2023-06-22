@@ -1,8 +1,15 @@
 {
 	"powers": [
 		"hate:lvl2/vignette",
+		"hate:lvl2/no_sleep",
+		"hate:lvl2/regen",
+		
 		"hate:lvl2/system/on_kill",
-		"hate:lvl2/system/passive"
+		"hate:lvl2/system/on_death",
+		"hate:lvl2/system/on_trade",
+		"hate:lvl2/system/on_kill",
+
+		"hate:lvl0/system/passive"
 	],
 	"icon": {
 		"item": "minecraft:player_head"

@@ -3,6 +3,7 @@
 		"hate:lvl0/vignette",
 		"hate:lvl0/system/on_kill",
 		"hate:lvl0/system/on_death",
+		"hate:lvl0/system/on_trade",
 		"hate:lvl0/system/passive"
 	],
 	"icon": {

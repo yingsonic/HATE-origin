@@ -3,23 +3,17 @@
     "description": "You have permanent strength 2.\n",
     "hidden": false,
 
-    "type": "origins:multiple",
-    "status": {
-        "type": "origins:action_over_time",
-        "entity_action": {
-            "type": "apoli:apply_effect",
-            "effect": {
-                "effect": "minecraft:strength",
-                "duration": 19,
-                "amplifier": 1,
-                "is_ambient": true,
-                "show_particles": false,
-                "show_icon": false
-            }
-        },
-        "interval": 9
+    "type": "origins:action_over_time",
+    "entity_action": {
+        "type": "apoli:apply_effect",
+        "effect": {
+            "effect": "minecraft:strength",
+            "duration": 19,
+            "amplifier": 1,
+            "is_ambient": true,
+            "show_particles": false,
+            "show_icon": false
+        }
     },
-    "disable": {
-        "type": "origins:disable_regen"
-    }
+    "interval": 9
 }

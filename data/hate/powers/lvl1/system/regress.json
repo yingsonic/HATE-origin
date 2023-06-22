@@ -21,7 +21,7 @@
                 "type": "origins:change_resource",
                 "resource": "*:h_var",
                 "operation": "set",
-                "change": 50
+                "change": 25
             }
         ]
     },
