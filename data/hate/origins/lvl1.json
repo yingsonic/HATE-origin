@@ -3,12 +3,11 @@
 		"hate:lvl1/effects",
 		"hate:lvl1/regen",
 		"hate:lvl1/vignette",
-		"hate:lvl1/system/on_kill",
-		"hate:lvl1/system/regress",
-		
+		"hate:lvl1/regress",
+
 		"hate:lvl0/system/on_kill",
-		"hate:lvl0/system/on_death",
 		"hate:lvl0/system/on_trade",
+		"hate:lvl0/system/on_farm",
 		"hate:lvl0/system/passive"
 	],
 	"icon": {

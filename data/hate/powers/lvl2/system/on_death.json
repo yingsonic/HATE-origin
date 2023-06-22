@@ -4,37 +4,69 @@
     "hidden": false,
 
     "type": "origins:multiple",
-    "main": {
-        "type": "origins:action_over_time",
-        "rising_action": {
-            "type": "origins:if_else",
-            "condition": {
-                "type": "origins:resource",
-                "resource": "*:h_var",
-                "comparison": ">=",
-                "compare_to": 100
-            },
-            "if_action": {
-                "type": "origins:and",
-                "actions": [
-                    {
-                        "type": "origins:execute_command",
-                        "command": "origin set @s origins:levels hate:lvl1"
-                    },
-                    {
-                        "type": "origins:change_resource",
-                        "resource": "*:h_level",
-                        "operation": "set",
-                        "change": 1
+    "natural": {
+        "type": "origins:prevent_death",
+        "damage_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "player"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "arrow"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "explosion.player"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "fireball"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "mob"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "sonic_boom"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "sting"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "thorns"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "trident"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "witherSkull"
+                }
+            ],
+            "inverted": true
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "say a"
+                },
+                {
+                    "type": "origins:damage",
+                    "amount": 4,
+                    "source": {
+                        "name": "magic"
                     }
-                ]
-            }
-        },
-        "condition": {
-            "type": "origins:health",
-            "comparison": "<=",
-            "compare_to": 0
-        },
-        "interval": 1
+                }
+            ]
+        }
     }
 }

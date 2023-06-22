@@ -40,7 +40,15 @@
         "max": 500,
         "start_value": 0,
         "hud_render": {
-            "should_render": true
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+            "bar_index": 24,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "*:*_level",
+                "comparison": "<",
+                "compare_to": 3
+            }
         }
     },
     "level": {

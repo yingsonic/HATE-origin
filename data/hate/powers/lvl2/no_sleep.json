@@ -3,9 +3,7 @@
     "description": "You can no longer sleep.\n",
     "hidden": false,
 
-    "type": "origins:prevent_block_use",
-    "block_condition": {
-        "type": "origins:block",
-        "block": "bed"
-    }
+    "type": "origins:prevent_sleep",
+    "set_spawn_point": true,
+    "message": "§cYou are restless."
 }

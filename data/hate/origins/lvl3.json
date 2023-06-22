@@ -2,7 +2,9 @@
 	"powers": [
 		"hate:lvl3/sobel",
 		"hate:lvl3/system/on_kill",
-		"hate:lvl3/system/passive"
+		"hate:lvl3/system/passive",
+		
+		"hate:lvl2/no_sleep"
 	],
 	"icon": {
 		"item": "minecraft:air"

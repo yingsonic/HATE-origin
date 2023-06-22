@@ -3,11 +3,11 @@
 		"hate:lvl2/vignette",
 		"hate:lvl2/no_sleep",
 		"hate:lvl2/regen",
-		
+
 		"hate:lvl2/system/on_kill",
 		"hate:lvl2/system/on_death",
 		"hate:lvl2/system/on_trade",
-		"hate:lvl2/system/on_kill",
+		"hate:lvl2/system/on_farm",
 
 		"hate:lvl0/system/passive"
 	],
@@ -18,6 +18,6 @@
 	"impact": 3,
 
 	"name": "§8Level 2",
-	"description": "§0Hate is cr§keepi§r§0ng up on you.",
+	"description": "§0H§kate is§r§0 cr§keepi§r§0ng u§kp on y§r§0ou.",
     "unchoosable": true
 }

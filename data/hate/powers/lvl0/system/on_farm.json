@@ -1,0 +1,95 @@
+{
+    "name": "§6§n",
+    "description": "\n",
+    "hidden": false,
+
+    "type": "origins:multiple",
+    "main": {
+        "type": "origins:action_on_block_break",
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:h_var",
+            "operation": "add",
+            "change": -5
+        },
+        "block_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:block",
+                            "block": "wheat"
+                        },
+                        {
+                            "type": "origins:block_state",
+                            "property": "age",
+                            "comparison": "==",
+                            "compare_to": 7
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:block",
+                            "block": "potatoes"
+                        },
+                        {
+                            "type": "origins:block_state",
+                            "property": "age",
+                            "comparison": "==",
+                            "compare_to": 7
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:block",
+                            "block": "carrots"
+                        },
+                        {
+                            "type": "origins:block_state",
+                            "property": "age",
+                            "comparison": "==",
+                            "compare_to": 7
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:block",
+                            "block": "beetroots"
+                        },
+                        {
+                            "type": "origins:block_state",
+                            "property": "age",
+                            "comparison": "==",
+                            "compare_to": 3
+                        }
+                    ]
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_cd",
+            "comparison": "==",
+            "compare_to": 0
+        },
+        "only_when_harvested": true
+    },
+    "cd": {
+        "type": "apoli:cooldown",
+        "cooldown": 5,
+        "hud_render": {
+            "should_render": false
+        }
+    }
+}

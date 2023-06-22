@@ -10,7 +10,7 @@
             "type": "origins:change_resource",
             "resource": "*:h_var",
             "operation": "add",
-            "change": 3
+            "change": 2
         },
         "target_condition": {
             "type": "origins:and",
@@ -35,7 +35,7 @@
             "type": "origins:change_resource",
             "resource": "*:h_var",
             "operation": "add",
-            "change": 10
+            "change": 6
         },
         "target_condition": {
             "type": "origins:and",
