@@ -5,7 +5,8 @@
 		"hate:lvl3/effects",
 		
 		"hate:lvl2/no_sleep",
-		"hate:lvl3/no_eating"
+		"hate:lvl3/no_eating",
+		"hate:lvl3/scream"
 	],
 	"icon": {
 		"item": "minecraft:air"

@@ -178,13 +178,13 @@
                 },
                 {
                     "type": "origins:execute_command",
-                    "command": "tellraw @s \"§8You are staa§kaaaa§kaa§r§8aa§ka§r§8aaa§kaaaaa§r§8aa§kaaa\""
+                    "command": "tellraw @s \"§0§kHATEHATEHATEHATEHATEHATEHATEHATEHATEHATE\""
                 },
                 {
                     "type": "apoli:apply_effect",
                     "effect": {
                         "effect": "minecraft:regeneration",
-                        "duration": 60,
+                        "duration": 40,
                         "amplifier": 9,
                         "is_ambient": true,
                         "show_particles": false,

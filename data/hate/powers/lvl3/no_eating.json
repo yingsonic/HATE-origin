@@ -15,7 +15,7 @@
         "entity_action": {
             "type": "origins:feed",
             "food": 4,
-            "saturation": 1
+            "saturation": 0.25
         },
         "hud_render": {
             "should_render": false
