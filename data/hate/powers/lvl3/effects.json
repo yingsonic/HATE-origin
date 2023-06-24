@@ -1,0 +1,75 @@
+{
+    "name": "§5§nStrong",
+    "description": "You have permanent strength 2.\n",
+    "hidden": true,
+
+    "type": "origins:multiple",
+    "status": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "apoli:apply_effect",
+            "effects": [
+                {
+                    "effect": "minecraft:strength",
+                    "duration": 19,
+                    "amplifier": 3,
+                    "is_ambient": true,
+                    "show_particles": false,
+                    "show_icon": false
+                },
+                {
+                    "effect": "minecraft:speed",
+                    "duration": 19,
+                    "amplifier": 1,
+                    "is_ambient": true,
+                    "show_particles": false,
+                    "show_icon": false
+                },
+                {
+                    "effect": "minecraft:resistance",
+                    "duration": 19,
+                    "amplifier": 2,
+                    "is_ambient": true,
+                    "show_particles": false,
+                    "show_icon": false
+                }
+            ]
+        },
+        "interval": 9
+    },
+    "negate": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "fall"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "fall.player"
+                }
+            ]
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -1
+        }
+    },
+    "drown": {
+        "type": "apoli:action_over_time",
+        "entity_action": {
+            "type": "origins:gain_air",
+            "value": 1
+        },
+        "condition": {
+            "type": "origins:in_block",
+            "block_condition": {
+                "type": "origins:block",
+                "block": "water"
+            }
+        },
+        "interval": 1
+    }
+}

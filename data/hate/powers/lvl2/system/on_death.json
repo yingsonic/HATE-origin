@@ -52,12 +52,25 @@
             ],
             "inverted": true
         },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:h_var",
+            "comparison": "==",
+            "compare_to": 500,
+            "inverted": true
+        },
         "entity_action": {
             "type": "origins:and",
             "actions": [
                 {
                     "type": "origins:execute_command",
-                    "command": "say a"
+                    "command": "title @s actionbar \"§3You're feeling a bit better.\""
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:h_var",
+                    "operation": "add",
+                    "change": -5
                 },
                 {
                     "type": "origins:damage",
@@ -67,6 +80,124 @@
                     }
                 }
             ]
+        }
+    },
+    "enrage": {
+        "type": "origins:prevent_death",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "player"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "arrow"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "explosion.player"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "fireball"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "mob"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "sonic_boom"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "sting"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "thorns"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "trident"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "witherSkull"
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:h_var",
+            "comparison": "==",
+            "compare_to": 500,
+            "inverted": true
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:nothing"
+                }
+            ]
+        }
+    },
+    "progress": {
+        "type": "origins:prevent_death",
+        "damage_condition": {
+            "type": "origins:constant",
+            "value": true
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:play_sound",
+                    "sound": "entity.lightning_bolt.thunder",
+                    "volume": 2,
+                    "pitch": 1.5
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "entity.lightning_bolt.thunder",
+                    "volume": 2,
+                    "pitch": 1
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "entity.ender_dragon.ambient",
+                    "volume": 1.5,
+                    "pitch": 1.2
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:levels hate:lvl3"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "tellraw @s \"§8You are staa§kaaaa§kaa§r§8aa§ka§r§8aaa§kaaaaa§r§8aa§kaaa\""
+                },
+                {
+                    "type": "apoli:apply_effect",
+                    "effect": {
+                        "effect": "minecraft:regeneration",
+                        "duration": 60,
+                        "amplifier": 9,
+                        "is_ambient": true,
+                        "show_particles": false,
+                        "show_icon": false
+                    }
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:h_var",
+            "comparison": "==",
+            "compare_to": 500
         }
     }
 }

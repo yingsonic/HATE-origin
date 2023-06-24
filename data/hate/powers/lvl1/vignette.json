@@ -29,5 +29,32 @@
         "green": 0.8,
         "blue": 0.8,
         "alpha": 1.0
+    },
+    "max": {
+        "type": "origins:action_over_time",
+        "rising_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "power grant @s hate:supps/max_shader"
+                },
+                {
+                    "type": "origins:delay",
+                    "ticks": 10,
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "power revoke @s hate:supps/max_shader"
+                    }
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:h_var",
+            "comparison": "==",
+            "compare_to": 500
+        },
+        "interval": 1
     }
 }

@@ -10,7 +10,7 @@
             "type": "origins:change_resource",
             "resource": "*:h_var",
             "operation": "add",
-            "change": -3
+            "change": -2
         },
         "block_condition": {
             "type": "origins:or",

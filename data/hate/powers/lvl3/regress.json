@@ -1,0 +1,35 @@
+{
+    "name": "§6§n",
+    "description": "\n",
+    "hidden": false,
+
+    "type": "origins:multiple",
+    "regress": {
+        "type": "origins:action_over_time",
+        "rising_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:levels hate:lvl0"
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:h_var",
+                    "operation": "set",
+                    "change": 0
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "title @s actionbar \"§7You feel... better.\""
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:health",
+            "comparison": "<=",
+            "compare_to": 0
+        },
+        "interval": 1
+    }
+}

@@ -4,6 +4,7 @@
 		"hate:lvl1/regen",
 		"hate:lvl1/vignette",
 		"hate:lvl1/regress",
+		"hate:lvl1/on_death",
 
 		"hate:lvl0/system/on_kill",
 		"hate:lvl0/system/on_trade",

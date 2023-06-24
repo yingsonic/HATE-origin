@@ -12,24 +12,24 @@
                 "type": "origins:resource",
                 "resource": "*:h_var",
                 "comparison": ">=",
-                "compare_to": 100
+                "compare_to": 500
             },
             "if_action": {
                 "type": "origins:and",
                 "actions": [
                     {
                         "type": "origins:execute_command",
-                        "command": "origin set @s origins:levels hate:lvl1"
+                        "command": "origin set @s origins:levels hate:lvl2"
                     },
                     {
                         "type": "origins:execute_command",
-                        "command": "title @s actionbar \"§cYou are starting to feel less human.\""
+                        "command": "title @s actionbar \"§4You are starting to feel less human.\""
                     },
                     {
                         "type": "origins:play_sound",
                         "sound": "entity.elder_guardian.curse",
                         "volume": 1,
-                        "pitch": 0.8
+                        "pitch": 0.6
                     }
                 ]
             }

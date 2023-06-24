@@ -13,15 +13,13 @@
             },
             {
                 "type": "origins:change_resource",
-                "resource": "*:h_level",
-                "operation": "set",
-                "change": 0
-            },
-            {
-                "type": "origins:change_resource",
                 "resource": "*:h_var",
                 "operation": "set",
                 "change": 25
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "title @s actionbar \"§aYou're feeling a bit better.\""
             }
         ]
     },

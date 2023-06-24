@@ -1,0 +1,12 @@
+{
+    "name": "§6§n",
+    "description": "\n",
+    "hidden": false,
+
+    "type": "origins:multiple",
+    "shader": {
+        "type": "origins:shader",
+        "shader": "minecraft:shaders/post/desaturate.json",
+        "toggleable": false
+    }
+}

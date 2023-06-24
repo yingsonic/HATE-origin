@@ -1,0 +1,25 @@
+{
+    "name": "§4§nSatiate",
+    "description": "You can no longer eat regular food. Siphon blood from your enemies.\n",
+    "hidden": false,
+    
+    "type": "origins:multiple",
+    "disable": {
+        "type": "origins:prevent_item_use",
+        "item_condition": {
+            "type": "origins:food"
+        }
+    },
+    "siphon": {
+        "type": "origins:self_action_on_kill",
+        "entity_action": {
+            "type": "origins:feed",
+            "food": 2,
+            "saturation": 0.25
+        },
+        "hud_render": {
+            "should_render": false
+        },
+        "cooldown": 10
+    }
+}

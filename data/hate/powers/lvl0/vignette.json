@@ -11,5 +11,32 @@
             "command": "worldborder warning distance 5"
         },
         "execute_chosen_when_orb": true
+    },
+    "warn": {
+        "type": "origins:action_over_time",
+        "rising_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "power grant @s hate:supps/max_shader"
+                },
+                {
+                    "type": "origins:delay",
+                    "ticks": 10,
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "power revoke @s hate:supps/max_shader"
+                    }
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:h_var",
+            "comparison": ">=",
+            "compare_to": 100
+        },
+        "interval": 1
     }
 }
