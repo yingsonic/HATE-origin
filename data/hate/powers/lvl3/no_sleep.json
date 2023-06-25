@@ -1,0 +1,9 @@
+{
+    "name": "§c§nRestless",
+    "description": "You can no longer sleep.\n",
+    "hidden": true,
+
+    "type": "origins:prevent_sleep",
+    "set_spawn_point": true,
+    "message": "§cYou are restless."
+}

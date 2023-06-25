@@ -1,0 +1,75 @@
+{
+    "name": "§6§n",
+    "description": "\n",
+    "hidden": false,
+
+    "type": "origins:action_over_time",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "tag @s add hateSelector"
+            },
+            {
+                "type": "apoli:area_of_effect",
+                "bientity_action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:add_velocity",
+                            "z": 0.25,
+                            "set": false
+                        },
+                        {
+                            "type": "origins:target_action",
+                            "action": {
+                                "type": "origins:execute_command",
+                                "command": "execute rotated as @p[tag=hateSelector] run tp @s ~ ~ ~ ~ ~"
+                            }
+                        }
+                    ]
+                },
+                "bientity_condition": {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "apoli:can_see"
+                        },
+                        {
+                            "type": "origins:target_condition",
+                            "condition": {
+                                "type": "origins:and",
+                                "conditions": [
+                                    {
+                                        "type": "origins:in_tag",
+                                        "tag": "hate:hostile",
+                                        "inverted": true
+                                    },
+                                    {
+                                        "type": "origins:in_tag",
+                                        "tag": "hate:neutral",
+                                        "inverted": true
+                                    },
+                                    {
+                                        "type": "origins:living"
+                                    },
+                                    {
+                                        "type": "origins:on_block"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                "include_target": false,
+                "radius": 8
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "tag @s remove hateSelector"
+            }
+        ]
+    },
+    "interval": 1
+}

@@ -4,8 +4,10 @@
 		"hate:lvl3/regress",
 		"hate:lvl3/effects",
 		
-		"hate:lvl2/no_sleep",
+		"hate:lvl3/no_sleep",
 		"hate:lvl3/no_eating",
+		"hate:lvl3/passives_run",
+		"hate:lvl3/phantomize",
 		"hate:lvl3/scream"
 	],
 	"icon": {
