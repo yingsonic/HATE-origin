@@ -82,6 +82,71 @@
             ]
         }
     },
+    "tag_entity": {
+        "type": "origins:modify_damage_taken",
+        "attacker_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "tag @s add hateEnrageTag" 
+                },
+                {
+                    "type": "origins:delay",
+                    "ticks": 210,
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "tag @s remove hateEnrageTag" 
+                    }
+                }
+            ]
+        },
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "player"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "arrow"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "explosion.player"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "fireball"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "mob"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "sonic_boom"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "sting"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "thorns"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "trident"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "witherSkull"
+                }
+            ]
+        }
+    },
     "enrage": {
         "type": "origins:prevent_death",
         "damage_condition": {
@@ -140,9 +205,83 @@
             "type": "origins:and",
             "actions": [
                 {
-                    "type": "origins:nothing"
+                    "type": "origins:change_resource",
+                    "resource": "*:*_var",
+                    "operation": "set",
+                    "change": 1
+                },
+                {
+                    "type": "origins:delay",
+                    "ticks": 200,
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "apoli:area_of_effect",
+                                "bientity_action": {
+                                    "type": "origins:actor_action",
+                                    "action": {
+                                        "type": "origins:and",
+                                        "actions": [
+                                            {
+                                                "type": "origins:damage",
+                                                "amount": 200,
+                                                "source": {
+                                                    "type": "origins:name",
+                                                    "name": "magic",
+                                                    "magic": true
+                                                }
+                                            },
+                                            {
+                                                "type": "origins:execute_command",
+                                                "command": "title @s actionbar \"§cYou didn't take revenge in time.\""
+                                            }
+                                        ]
+                                    }
+                                },
+                                "bientity_condition": {
+                                    "type": "origins:and",
+                                    "conditions": [
+                                        {
+                                            "type": "origins:target_condition",
+                                            "condition": {
+                                                "type": "origins:nbt",
+                                                "nbt": "{Tags:[\"hateEnrageTag\"]}"
+                                            }
+                                        },
+                                        {
+                                            "type": "origins:actor_condition",
+                                            "condition": {
+                                                "type": "origins:resource",
+                                                "resource": "*:*_var",
+                                                "comparison": "==",
+                                                "compare_to": 1
+                                            }
+                                        }
+                                    ]
+                                },
+                                "include_target": false,
+                                "radius": 15
+                            },
+                            {
+                                "type": "origins:change_resource",
+                                "resource": "*:*_var",
+                                "operation": "set",
+                                "change": 0
+                            }
+                        ]
+                    }
                 }
             ]
+        }
+    },
+    "var": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 1,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": false
         }
     },
     "progress": {

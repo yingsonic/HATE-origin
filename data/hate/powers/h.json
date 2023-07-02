@@ -1,39 +1,6 @@
 {
+    "hidden": true,
     "type": "origins:multiple",
-    "progress": {
-        "type": "origins:action_over_time",
-        "rising_action": {
-            "type": "origins:change_resource",
-            "resource": "*:*_level",
-            "operation": "add",
-            "change": 1
-        },
-        "condition": {
-            "type": "origins:and",
-            "conditions": [
-                {
-                    "type": "origins:resource",
-                    "resource": "*:*_var",
-                    "comparison": ">=",
-                    "compare_to": 500
-                },
-                {
-                    "type": "origins:resource",
-                    "resource": "*:*_level",
-                    "comparison": "<",
-                    "compare_to": 3
-                },
-                {
-                    "type": "origins:resource",
-                    "resource": "*:*_level",
-                    "comparison": "==",
-                    "compare_to": 0,
-                    "inverted": true
-                }
-            ]
-        },
-        "interval": 1
-    },
     "var": {
         "type": "origins:resource",
         "min": 0,
@@ -44,12 +11,11 @@
             "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
             "bar_index": 24,
             "condition": {
-                "type": "origins:resource",
-                "resource": "*:*_level",
-                "comparison": "<",
-                "compare_to": 3
+                "type": "origins:origin",
+                "origin": "hate:lvl3",
+                "layer": "origins:levels",
+                "inverted": true
             }
         }
-    },
-    "hidden": true
+    }
 }

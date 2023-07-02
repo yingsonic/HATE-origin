@@ -72,13 +72,22 @@
         },
         "interval": 1
     },
-    "max_always": {
+    "callback": {
         "type": "origins:action_on_callback",
         "entity_action_gained": {
-            "type": "origins:change_resource",
-            "resource": "*:h_var",
-            "operation": "set",
-            "change": 500
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:h_var",
+                    "operation": "set",
+                    "change": 500
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:timer"
+                }
+            ]
         }
     }
 }

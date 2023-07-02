@@ -13,9 +13,32 @@
     "siphon": {
         "type": "origins:self_action_on_kill",
         "entity_action": {
-            "type": "origins:feed",
-            "food": 4,
-            "saturation": 0.25
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:feed",
+                    "food": 4,
+                    "saturation": 0.25
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:timer",
+                    "operation": "add",
+                    "change": 900
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.ancient_debris.place",
+                    "volume": 1.5,
+                    "pitch": 0.4
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.ancient_debris.place",
+                    "volume": 1,
+                    "pitch": 0.6
+                }
+            ]
         },
         "hud_render": {
             "should_render": false

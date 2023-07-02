@@ -1,0 +1,16 @@
+{
+    "hidden": true,
+    "type": "apoli:cooldown",
+    "cooldown": 6000,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+        "bar_index": 17,
+        "condition": {
+            "type": "origins:origin",
+            "origin": "hate:lvl3",
+            "layer": "origins:levels"
+        },
+        "inverted": true
+    }
+}

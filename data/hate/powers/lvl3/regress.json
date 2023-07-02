@@ -10,6 +10,14 @@
             "type": "origins:and",
             "actions": [
                 {
+                    "type": "origins:damage",
+                    "amount": 200,
+                    "source": {
+                        "name": "magic",
+                        "magic": true
+                    }
+                },
+                {
                     "type": "origins:execute_command",
                     "command": "origin set @s origins:levels hate:lvl0"
                 },
@@ -26,8 +34,9 @@
             ]
         },
         "condition": {
-            "type": "origins:health",
-            "comparison": "<=",
+            "type": "origins:resource",
+            "resource": "*:timer",
+            "comparison": "==",
             "compare_to": 0
         },
         "interval": 1
