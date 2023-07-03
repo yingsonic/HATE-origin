@@ -86,7 +86,7 @@
         "key": {
             "key": "key.origins.secondary_active"
         },
-        "cooldown": 200
+        "cooldown": 300
     },
     "glow": {
         "type": "origins:entity_glow",
