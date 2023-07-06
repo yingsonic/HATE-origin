@@ -9,15 +9,16 @@
 		"hate:lvl0/system/on_kill",
 		"hate:lvl0/system/on_trade",
 		"hate:lvl0/system/on_farm",
+		"hate:lvl0/system/on_sleep",
 		"hate:lvl0/system/passive"
 	],
 	"icon": {
 		"item": "minecraft:player_head"
 	},
 	"order": 10,
-	"impact": 3,
+	"impact": 1,
 
 	"name": "§7Level 1",
-	"description": "§cHate is creeping up on you.",
+	"description": "§7Hate begins to alter your perception. The way you view the world is changing.",
     "unchoosable": true
 }

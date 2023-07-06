@@ -2,9 +2,10 @@
 	"powers": [
 		"hate:lvl2/vignette",
 		"hate:lvl2/no_sleep",
-		"hate:lvl2/no_eating",
 		"hate:lvl2/regen",
+		"hate:lvl2/no_eating",
 		"hate:lvl2/scream",
+		"hate:lvl2/golems",
 
 		"hate:lvl2/system/on_kill",
 		"hate:lvl2/system/on_death",
@@ -17,9 +18,9 @@
 		"item": "minecraft:player_head"
 	},
 	"order": 10,
-	"impact": 3,
+	"impact": 2,
 
 	"name": "§8Level 2",
-	"description": "§0H§kate is§r§0 cr§keepi§r§0ng u§kp on y§r§0ou.",
+	"description": "§7The world now appears to have a reddish tint. The way you view your world is changing.",
     "unchoosable": true
 }

@@ -8,6 +8,7 @@
 		"hate:lvl3/no_eating",
 		"hate:lvl3/on_death",
 		"hate:lvl3/passives_run",
+		"hate:lvl3/neutrals_attack",
 		"hate:lvl3/phantomize",
 		"hate:lvl3/scream"
 	],
@@ -18,6 +19,6 @@
 	"impact": 3,
 
 	"name": "§0Level §k3",
-	"description": "§0§kA r§kegul§r§0ar hu§kman§r§0. Your or§kdi§r§kna§r§0ry M§kin§r§kecr§r§0aft exp§kerienc§r§0e awaits.",
+	"description": "§0§kA regular human. Your ordinary Minecraft experience awaits.\n\n§0§kA regular human. Your ordinary Minecraft experience awaits.\n\n§0§kA regular human. Your ordinary Minecraft experience awaits.\n\n§0§kA regular human. Your ordinary Minecraft experience awaits.\n\n§0§kA regular human. Your ordinary Minecraft experience awaits.\n\n§0§kA regular human. Your ordinary Minecraft experience awaits.\n\n§0§kA regular human. Your ordinary Minecraft experience awaits.\n\n§0§kA regular human. Your ordinary Minecraft experience awaits.\n\n§0§kA regular human. Your ordinary Minecraft experience awaits.\n\n§0§kA regular human. Your ordinary Minecraft experience awaits.\n\n§0§kA regular human. Your ordinary Minecraft experience awaits.",
     "unchoosable": true
 }

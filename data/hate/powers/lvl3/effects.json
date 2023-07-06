@@ -37,6 +37,24 @@
         },
         "interval": 9
     },
+    "trading": {
+        "type": "origins:prevent_entity_use",
+        "bientity_action": {
+            "type": "origins:actor_action",
+            "action": {
+                "type": "origins:swing_hand",
+                "hand": "MAIN_HAND"
+            }
+        },
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:entity_type",
+                "entity_type": "villager"
+            }
+        },
+        "hands": ["main_hand","off_hand"]
+    },
     "negate": {
         "type": "origins:modify_damage_taken",
         "damage_condition": {
@@ -88,6 +106,33 @@
                     "power": "*:timer"
                 }
             ]
+        },
+        "entity_action_lost": {
+            "type": "apoli:area_of_effect",
+            "bientity_action": {
+                "type": "origins:target_action",
+                "action": {
+                    "type": "origins:execute_command",
+                    "command": "data modify entity @s AngerTime set value 0"
+                }
+            },
+            "bientity_condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "apoli:can_see"
+                    },
+                    {
+                        "type": "origins:target_condition",
+                        "condition": {
+                            "type": "origins:in_tag",
+                            "tag": "hate:neutral"
+                        }
+                    }
+                ]
+            },
+            "include_target": false,
+            "radius": 25
         }
     }
 }

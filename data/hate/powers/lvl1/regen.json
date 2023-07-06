@@ -1,6 +1,6 @@
 {
-    "name": "§5§nRegeneration",
-    "description": "You can regenerate at the press of a button, but you have no natural health regeneration.\n",
+    "name": "§b§nRegeneration",
+    "description": "You can regenerate at the press of a button, but you have no natural health regeneration.",
     "hidden": false,
 
     "type": "origins:multiple",

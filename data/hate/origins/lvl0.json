@@ -5,13 +5,14 @@
 		"hate:lvl0/system/on_death",
 		"hate:lvl0/system/on_trade",
 		"hate:lvl0/system/on_farm",
+		"hate:lvl0/system/on_sleep",
 		"hate:lvl0/system/passive"
 	],
 	"icon": {
 		"item": "minecraft:player_head"
 	},
 	"order": 10,
-	"impact": 3,
+	"impact": 0,
 
 	"name": "§fLevel 0",
 	"description": "A regular human. Your ordinary Minecraft experience awaits.",

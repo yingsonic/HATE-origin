@@ -1,5 +1,8 @@
 {
-    "hidden": true,
+    "name": "§0§nHATE",
+    "description": "Hate will come in 4 phases. Your current hate is displayed as a black bar that resets every phase transition.\n\nHate creeps up very slowly, and as you commit certain actions, your Hate value can jump forward an interval or decrease if you live peacefully.\n\nThere are a few ways to drop your HATE and even return to LV0. Socializing, (such as trading with villagers and being around animals), farming, and sleeping.\n\nWhile it's completely controllable for now, your first death is the turning point. If you have a small amount of Hate brewed, upon your first death you will be brought back and forced into your first phase of Hate.",
+    "hidden": false,
+
     "type": "origins:multiple",
     "var": {
         "type": "origins:resource",

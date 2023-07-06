@@ -1,0 +1,13 @@
+{
+    "name": "§6§n",
+    "description": "\n",
+    "hidden": true,
+
+    "type": "origins:action_on_wake_up",
+    "entity_action": {
+        "type": "origins:change_resource",
+        "resource": "*:h_var",
+        "operation": "add",
+        "change": -10
+    }
+}

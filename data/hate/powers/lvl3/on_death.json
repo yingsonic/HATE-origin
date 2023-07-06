@@ -1,47 +1,11 @@
 {
     "name": "§6§n",
     "description": "\n",
-    "hidden": false,
+    "hidden": true,
 
     "type": "origins:multiple",
     "tag_entity": {
         "type": "origins:modify_damage_taken",
-        "bientity_action": {
-            "type": "origins:delay",
-            "ticks": 2,
-            "action": {
-                "type": "origins:if_else",
-                "condition": {
-                    "type": "origins:target_condition",
-                    "condition": {
-                        "type": "origins:resource",
-                        "resource": "*:*_var",
-                        "comparison": "==",
-                        "compare_to": 1
-                    }
-                },
-                "if_action": {
-                    "type": "origins:actor_action",
-                    "action": {
-                        "type": "origins:and",
-                        "actions": [
-                            {
-                                "type": "origins:execute_command",
-                                "command": "tag @s add hateEnrageTag" 
-                            },
-                            {
-                                "type": "origins:delay",
-                                "ticks": 210,
-                                "action": {
-                                    "type": "origins:execute_command",
-                                    "command": "tag @s remove hateEnrageTag" 
-                                }
-                            }
-                        ]
-                    }
-                }
-            }
-        },
         "damage_condition": {
             "type": "origins:or",
             "conditions": [
@@ -86,6 +50,42 @@
                     "name": "witherSkull"
                 }
             ]
+        },
+        "bientity_action": {
+            "type": "origins:delay",
+            "ticks": 2,
+            "action": {
+                "type": "origins:if_else",
+                "condition": {
+                    "type": "origins:target_condition",
+                    "condition": {
+                        "type": "origins:resource",
+                        "resource": "*:*_var",
+                        "comparison": "==",
+                        "compare_to": 1
+                    }
+                },
+                "if_action": {
+                    "type": "origins:actor_action",
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:execute_command",
+                                "command": "tag @s add hateEnrageTag" 
+                            },
+                            {
+                                "type": "origins:delay",
+                                "ticks": 210,
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "tag @s remove hateEnrageTag" 
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
         }
     },
     "enrage": {
@@ -150,14 +150,24 @@
                 },
                 {
                     "type": "apoli:apply_effect",
-                    "effect": {
-                        "effect": "minecraft:resistance",
-                        "duration": 200,
-                        "amplifier": 4,
-                        "is_ambient": true,
-                        "show_particles": false,
-                        "show_icon": false
-                    }
+                    "effects": [
+                        {
+                            "effect": "minecraft:resistance",
+                            "duration": 200,
+                            "amplifier": 4,
+                            "is_ambient": true,
+                            "show_particles": false,
+                            "show_icon": false
+                        },
+                        {
+                            "effect": "minecraft:speed",
+                            "duration": 200,
+                            "amplifier": 1,
+                            "is_ambient": true,
+                            "show_particles": false,
+                            "show_icon": false
+                        }
+                    ]
                 },
                 {
                     "type": "apoli:trigger_cooldown",
@@ -181,7 +191,7 @@
                                     "type": "origins:if_else",
                                     "condition": {
                                         "type": "origins:command",
-                                        "command": "execute if entity @e[tag=hateEnrageTag,distance=..25]",
+                                        "command": "execute if entity @e[tag=hateEnrageTag,distance=..50,sort=nearest]",
                                         "comparison": ">=",
                                         "compare_to": 1
                                     },
@@ -221,23 +231,33 @@
             ]
         },
         "condition": {
-            "type": "origins:and",
-            "conditions": [
-                {
-                    "type": "origins:resource",
-                    "resource": "*:*_var",
-                    "comparison": "==",
-                    "compare_to": 0
-                },
-                {
-                    "type": "origins:resource",
-                    "resource": "*:h_var",
-                    "comparison": "==",
-                    "compare_to": 500,
-                    "inverted": true
-                }
-            ]
+            "type": "origins:resource",
+            "resource": "*:*_var",
+            "comparison": "==",
+            "compare_to": 0
         }
+    },
+    "glow": {
+        "type": "origins:entity_glow",
+        "entity_condition": {
+            "type": "origins:nbt",
+            "nbt": "{Tags:[\"hateEnrageTag\"]}"
+        },
+        "bientity_condition": {
+            "type": "origins:distance",
+            "comparison": "<=",
+            "compare_to": 50
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_var",
+            "comparison": "==",
+            "compare_to": 1
+        },
+        "use_teams": false,
+        "red": 1,
+        "green": 0,
+        "blue": 0
     },
     "var": {
         "type": "origins:resource",
