@@ -169,11 +169,24 @@
                                 "command": "tag @s add hateEnrageTag" 
                             },
                             {
+                                "type": "origins:execute_command",
+                                "command": "power grant @s hate:supps/glowing"
+                            },
+                            {
                                 "type": "origins:delay",
                                 "ticks": 210,
                                 "action": {
-                                    "type": "origins:execute_command",
-                                    "command": "tag @s remove hateEnrageTag" 
+                                    "type": "origins:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:execute_command",
+                                            "command": "tag @s remove hateEnrageTag" 
+                                        },
+                                        {
+                                            "type": "origins:execute_command",
+                                            "command": "power revoke @s hate:supps/glowing"
+                                        }
+                                    ]
                                 }
                             }
                         ]
@@ -292,41 +305,39 @@
                             {
                                 "type": "origins:if_else",
                                 "condition": {
-                                    "type": "origins:resource",
-                                    "resource": "*:*_var",
-                                    "comparison": "==",
-                                    "compare_to": 1
+                                    "type": "origins:and",
+                                    "conditions": [
+                                        {
+                                            "type": "origins:command",
+                                            "command": "execute if entity @e[tag=hateEnrageTag,distance=..50]",
+                                            "comparison": ">=",
+                                            "compare_to": 1
+                                        },
+                                        {
+                                            "type": "origins:resource",
+                                            "resource": "*:*_var",
+                                            "comparison": "==",
+                                            "compare_to": 1
+                                        }
+                                    ]
                                 },
                                 "if_action": {
-                                    "type": "origins:if_else",
-                                    "condition": {
-                                        "type": "origins:command",
-                                        "command": "execute if entity @e[tag=hateEnrageTag,distance=..50]",
-                                        "comparison": ">=",
-                                        "compare_to": 1
-                                    },
-                                    "if_action": {
-                                        "type": "origins:and",
-                                        "actions": [
-                                            {
-                                                "type": "origins:damage",
-                                                "amount": 200,
-                                                "source": {
-                                                    "type": "origins:name",
-                                                    "name": "magic",
-                                                    "magic": true
-                                                }
-                                            },
-                                            {
-                                                "type": "origins:execute_command",
-                                                "command": "title @s actionbar \"§4You didn't take revenge in time.\""
+                                    "type": "origins:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:damage",
+                                            "amount": 200,
+                                            "source": {
+                                                "type": "origins:name",
+                                                "name": "magic",
+                                                "magic": true
                                             }
-                                        ]
-                                    },
-                                    "else_action": {
-                                        "type": "origins:execute_command",
-                                        "command": "title @s actionbar \"§4Taken care of.\""
-                                    }
+                                        },
+                                        {
+                                            "type": "origins:execute_command",
+                                            "command": "title @s actionbar \"§4You didn't take revenge in time.\""
+                                        }
+                                    ]
                                 }
                             },
                             {
@@ -359,27 +370,34 @@
             ]
         }
     },
-    "glow": {
-        "type": "origins:entity_glow",
-        "entity_condition": {
-            "type": "origins:nbt",
-            "nbt": "{Tags:[\"hateEnrageTag\"]}"
-        },
-        "bientity_condition": {
-            "type": "origins:distance",
-            "comparison": "<=",
-            "compare_to": 50
+    "check": {
+        "type": "origins:action_over_time",
+        "falling_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_arbitrary",
+                    "operation": "set",
+                    "change": 200
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "title @s actionbar \"§4Taken care of.\""
+                },
+                {
+                    "type": "origins:clear_effect",
+                    "effect": "blindness"
+                }
+            ]
         },
         "condition": {
-            "type": "origins:resource",
-            "resource": "*:*_var",
-            "comparison": "==",
+            "type": "origins:command",
+            "command": "execute if entity @e[tag=hateEnrageTag,distance=..50]",
+            "comparison": ">=",
             "compare_to": 1
         },
-        "use_teams": false,
-        "red": 1,
-        "green": 0,
-        "blue": 0
+        "interval": 1
     },
     "var": {
         "type": "origins:resource",

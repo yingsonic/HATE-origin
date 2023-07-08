@@ -1,0 +1,70 @@
+{
+    "name": "§6§n",
+    "description": "\n",
+    "hidden": true,
+
+    "type": "apoli:action_over_time",
+    "entity_action": {
+        "type": "apoli:area_of_effect",
+        "bientity_action": {
+            "type": "origins:if_else",
+            "condition": {
+                "type": "origins:distance",
+                "comparison": "<=",
+                "compare_to": 5
+            },
+            "if_action": {
+                "type": "apoli:target_action",
+                "action": {
+                    "type": "origins:execute_command",
+                    "command": "power grant @s hate:supps/shaking"
+                }
+            },
+            "else_action": {
+                "type": "apoli:target_action",
+                "action": {
+                    "type": "origins:execute_command",
+                    "command": "power revoke @s hate:supps/shaking"
+                }
+            }
+        },
+        "bientity_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "apoli:can_see"
+                },
+                {
+                    "type": "origins:target_condition",
+                    "condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:or",
+                                "conditions": [
+                                    {
+                                        "type": "origins:in_tag",
+                                        "tag": "hate:hostile"
+                                    },
+                                    {
+                                        "type": "origins:in_tag",
+                                        "tag": "hate:neutral"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "origins:living"
+                            },
+                            {
+                                "type": "origins:on_block"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "include_target": false,
+        "radius": 10
+    },
+    "interval": 4
+}

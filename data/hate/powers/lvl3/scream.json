@@ -66,15 +66,39 @@
                 },
                 {
                     "type": "origins:play_sound",
-                    "sound": "entity.enderman.scream",
+                    "sound": "entity.phantom.ambient",
                     "volume": 1,
-                    "pitch": 0.8
+                    "pitch": 1.4
                 },
                 {
                     "type": "origins:play_sound",
-                    "sound": "block.ancient_debris.place",
+                    "sound": "entity.phantom.death",
                     "volume": 1.5,
-                    "pitch": 0.4
+                    "pitch": 1.6
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "entity.phantom.death",
+                    "volume": 1.5,
+                    "pitch": 1.35
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "entity.phantom.death",
+                    "volume": 2,
+                    "pitch": 1.6
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "entity.phantom.death",
+                    "volume": 1.25,
+                    "pitch": 1.4
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "entity.phantom.ambient",
+                    "volume": 1,
+                    "pitch": 1.5
                 }
             ]
         },
@@ -107,8 +131,8 @@
         },
         "use_teams": false,
         "red": 1,
-        "green": 0.4,
-        "blue": 0.4
+        "green": 0.7,
+        "blue": 0.7
     },
     "var": {
         "type": "origins:resource",

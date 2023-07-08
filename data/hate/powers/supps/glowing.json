@@ -1,0 +1,28 @@
+{
+    "hidden": true,
+    "type": "origins:self_glow",
+    "entity_condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:origin",
+                "origin": "hate:lvl2",
+                "layer": "origins:levels"
+            },
+            {
+                "type": "origins:origin",
+                "origin": "hate:lvl3",
+                "layer": "origins:levels"
+            }
+        ]
+    },
+    "bientity_condition": {
+        "type": "origins:distance",
+        "comparison": "<=",
+        "compare_to": 50
+    },
+    "use_teams": false,
+    "red": 1,
+    "green": 0,
+    "blue": 0
+}

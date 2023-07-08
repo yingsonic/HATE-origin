@@ -6,9 +6,12 @@
 		
 		"hate:lvl3/no_sleep",
 		"hate:lvl3/no_eating",
+		"hate:lvl3/regen",
+
 		"hate:lvl3/on_death",
 		"hate:lvl3/passives_run",
 		"hate:lvl3/neutrals_attack",
+		"hate:lvl3/mobs_shake",
 		"hate:lvl3/phantomize",
 		"hate:lvl3/scream"
 	],

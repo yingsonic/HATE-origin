@@ -19,6 +19,11 @@
                     "type": "origins:living"
                 },
                 {
+                    "type": "origins:entity_type",
+                    "entity_type": "armor_stand",
+                    "inverted": true
+                },
+                {
                     "type": "origins:in_tag",
                     "tag": "hate:hostile"
                 }
@@ -42,6 +47,11 @@
             "conditions": [
                 {
                     "type": "origins:living"
+                },
+                {
+                    "type": "origins:entity_type",
+                    "entity_type": "armor_stand",
+                    "inverted": true
                 },
                 {
                     "type": "origins:in_tag",
@@ -68,6 +78,11 @@
             "conditions": [
                 {
                     "type": "origins:living"
+                },
+                {
+                    "type": "origins:entity_type",
+                    "entity_type": "armor_stand",
+                    "inverted": true
                 },
                 {
                     "type": "origins:in_tag",

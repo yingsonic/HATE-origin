@@ -1,7 +1,7 @@
 {
     "name": "§3§nRegeneration",
     "description": "You can regenerate yourself at the press of a button, but you have no natural health regeneration.\n",
-    "hidden": false,
+    "hidden": true,
 
     "type": "origins:multiple",
     "activate": {
@@ -26,9 +26,9 @@
                 },
                 {
                     "type": "origins:change_resource",
-                    "resource": "*:h_var",
+                    "resource": "*:timer",
                     "operation": "add",
-                    "change": 3
+                    "change": -600
                 }
             ]
         },

@@ -1,0 +1,101 @@
+{
+    "name": "§6§n",
+    "description": "\n",
+    "hidden": false,
+
+    "type": "origins:multiple",
+    "aggro": {
+        "type": "apoli:action_over_time",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "tag @s add hateWolfSelector"
+                },
+                {
+                    "type": "apoli:area_of_effect",
+                    "bientity_action": {
+                        "type": "origins:if_else",
+                        "condition": {
+                            "type": "origins:distance",
+                            "comparison": "<=",
+                            "compare_to": 15
+                        },
+                        "if_action": {
+                            "type": "origins:target_action",
+                            "action": {
+                                "type": "origins:and",
+                                "actions": [
+                                    {
+                                        "type": "origins:execute_command",
+                                        "command": "execute at @a[tag=hateWolfSelector,sort=nearest] run data modify entity @s AngryAt set from entity @p UUID"
+                                    },
+                                    {
+                                        "type": "origins:execute_command",
+                                        "command": "data modify entity @s AngerTime set value 15"
+                                    }
+                                ]
+                            }
+                        },
+                        "else_action": {
+                            "type": "origins:target_action",
+                            "action": {
+                                "type": "origins:and",
+                                "actions": [
+                                    {
+                                        "type": "origins:execute_command",
+                                        "command": "execute at @a[tag=hateWolfSelector,sort=nearest] run data modify entity @s AngryAt set from entity @s UUID"
+                                    },
+                                    {
+                                        "type": "origins:execute_command",
+                                        "command": "data modify entity @s AngerTime set value 0"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "bientity_condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "apoli:can_see"
+                            },
+                            {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "wolf"
+                                }
+                            }
+                        ]
+                    },
+                    "include_target": false,
+                    "radius": 25
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "tag @s remove hateWolfSelector"
+                }
+            ]
+        },
+        "interval": 5
+    },
+    "prevent": {
+        "type": "origins:prevent_entity_use",
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:entity_type",
+                "entity_type": "wolf"
+            }
+        },
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "bone"
+            }
+        },
+        "hands": ["main_hand", "off_hand"]
+    }
+}

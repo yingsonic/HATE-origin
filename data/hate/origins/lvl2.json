@@ -3,8 +3,10 @@
 		"hate:lvl2/vignette",
 		"hate:lvl2/no_sleep",
 		"hate:lvl2/regen",
+		"hate:lvl1/effects",
 		"hate:lvl2/no_eating",
 		"hate:lvl2/scream",
+		"hate:lvl2/untamable",
 		"hate:lvl2/golems",
 
 		"hate:lvl2/system/on_kill",
